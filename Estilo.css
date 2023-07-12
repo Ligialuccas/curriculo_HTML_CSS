@@ -1,0 +1,207 @@
+/*Isso garante que o preenchimento e a borda sejam incluídos na largura e altura totais dos elementos*/
+* {
+    box-sizing: border-box;
+}
+/*As colunas dentro de uma linha estão todas flutuando para a esquerda e, portanto, são retiradas do fluxo da página, e outros elementos serão colocados como se as colunas não existissem. Para evitar isso, adicionaremos um estilo que limpa o fluxo:*/
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Define a cor de fundo do corpo */
+body {
+    background-color: #f3e9fc;
+}
+
+/* Remove a margem, o preenchimento e o estilo de lista padrão dos elementos ul e define sua largura */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150xp;
+}
+
+
+/*todas essas colunas devem estar flutuando para a esquerda e ter um preenchimento de "15px" */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Define a família de fontes para toda a página */
+html {
+    font-family: Lucida Calligraphy Italic;
+}
+
+/* Estiliza o cabeçalho com uma cor de fundo, cor de texto, preenchimento e alinhamento de texto */
+.header {
+    background-color: #8a2be2;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Remove a margem e o preenchimento padrão dos elementos ul dentro de .menu */
+.menu ul {
+    margin: 0;
+    padding: 0;    
+
+}
+
+/* Estiliza os elementos li dentro de .menu com preenchimento, margem, cor de fundo, cor de texto e sombra da caixa */
+.menu li {
+    padding: 20px;
+    margin-bottom: 0px;
+    background-color: #a155e7;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Remove a decoração do texto dos elementos a dentro de .menu e define sua cor de texto */
+.menu a{
+    text-decoration: none; 
+    color: #ffffff;
+}
+
+/* Altera a cor de fundo dos elementos li dentro de .menu ao passar o mouse */
+.menu li:hover {
+    background-color: #dbbff6;
+    text-decoration: none;
+}
+ 
+/* Estiliza .aside com uma cor de fundo, preenchimento, cor de texto, alinhamento de texto, tamanho da fonte e sombra da caixa */
+.aside {
+    background-color: #a155e7;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Estiliza os elementos li dentro de .aside com preenchimento */
+.aside li {
+    padding: 5px;  
+}
+
+/* Centraliza o texto dentro das tabelas */
+table {
+    text-align: center;
+}
+
+/* Define a largura, altura e margens do elemento com id #cert */
+#cert{
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Define a largura, altura e margens dos elementos img */
+img{
+    width: 300px;
+    height: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Define a cor do texto do elemento com id #cor1 */
+#cor1{
+    color: #8a2be2;
+}
+
+/* Define a cor do texto do elemento com id #cor2 */
+#cor2 {
+    color: #9B89B3;
+}
+
+/* Centraliza o texto dentro dos formulários */
+form {
+    text-align: center;
+}
+
+/* Define a cor de fundo, margem inferior e largura dos elementos input[type="text"] dentro de formulários */
+form input[type="text"] {
+    background-color: #9B89B3;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+/* Define a cor de fundo e margem inferior dos botões dentro de formulários */
+form button {
+    background-color: #dbbff6;
+    margin-bottom: 30px;
+}
+
+/* Estiliza o rodapé com uma cor de fundo, cor de texto, alinhamento de texto, tamanho da fonte, preenchimento e altura */
+.footer {
+    background-color: #9B89B3;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    height: 130px;
+}
+
+/* Remove a decoração do texto e define a cor do texto dos elementos a dentro de .footer */
+.footer a {
+text-decoration: none;
+color: #ffffff;
+}
+
+/* Remove o estilo de lista, margem e preenchimento padrão dos elementos ul dentro de .footer e os exibe como flex */
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex !important;
+    justify-content: center;
+}
+
+/* Define a flexibilidade e o alinhamento de texto dos elementos li dentro de .footer */
+.footer li {
+    flex: 1;
+    text-align: center;
+}
+
+/* Estiliza os elementos a dentro de .footer com display, preenchimento, borda, raio da borda e cor de fundo */
+.footer a {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #dbbff6;
+}
+
+/* Fixa o rodapé na parte inferior da página e define sua largura */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Define a largura das colunas para desktop */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33;}
+.col-11 {width: 91.33%;}
+.col-12 {width: 100%;}
+
+
+/* Define a largura das colunas para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    /* Para telefones celulares: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
